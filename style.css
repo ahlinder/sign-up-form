@@ -1,7 +1,18 @@
+@font-face {
+    font-family: roboto-mono;
+    src: url(fonts/RobotoMono-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: ubuntu;
+    src: url(fonts/Ubuntu/Ubuntu-Regular.ttf);
+}
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
 }
 
 .main-container {
@@ -14,6 +25,7 @@
     width: 35%;
     background-image: url(images/leaves-background.avif);
     min-height: 100vh;
+    font-family:ubuntu ;
 }
 
 header {
@@ -31,15 +43,20 @@ header {
     display: flex;
     flex-direction: column;
     width: 65%;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: ubuntu;
     font-size: 18px;
     font-weight: 600;
-    margin-top: 100px;
+    margin-top: 140px;
 }
 
 .form-container {
     border: 1px solid #D6D9DC;
     border-radius: 3px;
+    font-family: roboto-mono;
+}
+
+.form-container > .info-paragraph {
+    font-family: ubuntu;
 }
 
 .odin-logo {
@@ -53,20 +70,25 @@ button {
     background-color: #596D48;
     color: white;
     padding: 10px;
-    border: 1px solid black;
-    border-radius: 3px;
+    border: 1px solid #596D48;
+    border-radius: 4px;
     margin: 20px;
+    font-family: ubuntu;
+    cursor: pointer;
 }
 
-a {
+.log-in {
     color: darkolivegreen;
 }
 
 footer {
     margin-top: auto;
-    color: white;
     display: flex;
     justify-content: center;
+}
+
+.reference {
+    color: white;
 }
 
 .form-row-container{
@@ -80,18 +102,19 @@ footer {
 }
 
 p, label, input, button {
-    margin-left: 30px;
+    margin-left: 50px;
 }
 
 label{
-    font-weight: 100;
-    font-size: 14px;
+    font-weight: 400;
+    font-size: 12px;
 }
 
 input {
     margin-bottom: 20px;
-    border: 1px solid #D6D9DC;
+    border: 1.5px solid #D6D9DC;
     border-radius: 3px;
+    outline: none;
 }
 
 .info-paragraph {
@@ -102,6 +125,26 @@ input {
     margin-top: 10px;
 }
 
-input::selection {
-    border: blue;
+input:focus {
+    border-color: #72A0C1;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+input:invalid {
+    border-color: #D2122E;
+}
+
+footer.git-reference{
+    margin-left: 50px;
+}
+
+.git-logo {
+    max-width: 30px;
+    max-height: 30px;
+    padding-left: 10px;
+}
+
+.git-logo:hover {
+    max-width: 35px;
+    max-height: 35px;
 }
